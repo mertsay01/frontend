@@ -1,0 +1,29 @@
+@use 'components';
+
+.footer{
+    @extend %section;
+    background-color: black;
+}
+
+.footer__logoos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20rem;
+
+}
+
+.footer__logo{
+    width: 20%;
+    height: 40rem;
+    list-style: none;
+    position: relative;
+}
+
+.footer__img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+

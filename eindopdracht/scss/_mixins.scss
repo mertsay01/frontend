@@ -1,0 +1,23 @@
+@use 'colors';
+
+@mixin flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin vleugel{
+    background-color: rgba(58, 231, 228, 0.8);
+    width: 70px;
+	height: 70px;
+	border: 2px solid #3ae7e4;
+	border-radius: 0 70px;
+	position: relative;
+}
+
+@mixin streep{
+    background-color: colors.$bij-streep-kleur;
+	height: 100px;
+	width: 20px;
+	position: relative;
+}

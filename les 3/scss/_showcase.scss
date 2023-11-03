@@ -1,0 +1,82 @@
+@use 'mixins';
+@use 'colors';
+@use 'animations';
+
+.showcase{
+    width: 80vw;
+    max-width: 150rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 4rem;
+    background: colors.$background;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    @include animations.popup;
+
+    &__input{
+        font-size: 100%;
+        padding: 2rem;
+        padding-left: 0;
+        width: 50%;
+        border: none;
+        background: none;
+        border-bottom: 0.2rem solid #54bab9;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__wrapper{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__hartje{
+        font-size: 150%;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__hartje.fa-solid{
+        color: #54bab9;
+    }
+
+    &:before{
+        transform: translateX(-50%);
+    }
+    &:after{
+        transform: translateY(-50%);
+    }
+
+    &__font{
+        font-size: 150%;
+        font-weight: 400;
+    }
+
+    &__output{
+        font-size: 250%;
+
+        &--cursive{
+            @include mixins.fontcursive;
+        }
+
+        &--sansserif{
+            @include mixins.fontsansserif;
+        }
+
+        &--serif{
+            @include mixins.fontserif;
+        }
+    }
+}
